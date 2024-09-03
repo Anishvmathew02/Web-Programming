@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial 5 - ii</title>
+</head>
+
+<body>
+    <script>
+        function checkPalindrome() {
+            var number = prompt("Enter a five-digit number to check if it's a palindrome:");
+            
+            if (number <= 10000 || number > 99999) {
+                alert("Please enter a valid five-digit number.");
+                checkPalindrome();
+                return;
+            }
+
+            let reversedNumber = number.split('').reverse().join('');
+            if (number === reversedNumber) {
+                alert(`The number ${number} is a palindrome.`);
+            } else {
+                alert(`The number ${number} is not a palindrome.`);
+            }
+        }
+
+        checkPalindrome();
+    </script>
+</body>
+
+</html>
