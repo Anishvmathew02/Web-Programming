@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body align="center">
+    <h1>User Login</h1>
+    <form name="f2">
+        <label>Username:</label> <input type="text" name="username"> <br> <br>
+        <label>Password:</label> <input type="password" name="password"> <br> <br>
+        <input type="button" onclick="validate()" value="Login">
+
+        <script>
+            function validate() {
+                if (document.f2.username.value === '' ) {
+                    alert('Enter the username.');
+                    return false;
+                }
+
+                if (document.f2.password.value === '' ) {
+                    alert('Enter the password.');
+                    return false;
+                }
+
+                document.writeln("<h2 style='text-align:center'>Login successful!</h2>");
+                return true;
+            }
+
+        </script>
+    </form>
+</body>
+</html>

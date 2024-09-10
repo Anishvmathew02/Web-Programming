@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+</head>
+<body align="center">
+    <h1>User Registration</h1>
+    <form name="f1">
+        <label>Name:</label> <input type="text" name="name"> <br> <br>
+        <label>Phone no:</label> <input type="tel" name="phone"> <br> <br>
+        <label>E-mail:</label> <input type="email" name="mail"> <br> <br>
+        <label>Username:</label> <input type="text" name="username"> <br> <br>
+        <label>Password:</label> <input type="password" name="password"> <br> <br>
+        <label>Confirm password:</label> <input type="password" name="confirmPass"> <br> <br>
+        <input type="button" onclick="validate()" value="Submit">
+    </form>
+
+    <script>
+        function validate() {
+            if (document.f1.name.value === '' ) {
+                alert('Name field should not be blank');
+                return false;
+            }
+
+            if (isNaN(document.f1.phone.value)) {
+                alert('Enter only numbers for phone field.');
+                return false;
+            }
+
+            if (document.f1.phone.value.length < 10 ) {
+                alert('Phone numbers must be 10 digits.');  
+                return false;  
+            }
+
+            if (document.f1.username.value === '' ) {
+                alert('Set a username.');
+                return false;
+            }
+
+            if (document.f1.password.value === '' ) {
+                alert('Set a password.');
+                return false;
+            }
+
+            if (document.f1.password.value !== document.f1.confirmPass.value) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            document.writeln("<h2 style='text-align:center'>Registration successful!</h2>");
+            return true;
+        }
+    </script>
+</body>
+</html>

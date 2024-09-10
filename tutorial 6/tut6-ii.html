@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Updation</title>
+</head>
+<body>
+    <form align="center">
+        <p id="para">Welcome</p>
+        <input type="button" onclick="change()" value="Click" />
+    </form>
+
+
+    <script>
+        function change() {
+            document.getElementById('para').innerHTML = "<b>Hello from Javascript</b>"
+        }
+    </script>
+</body>
+</html>
